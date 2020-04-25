@@ -1,2 +1,2 @@
-# callback-adapeters
+# callback-adapters
 Callback adaters for various frameworks
