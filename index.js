@@ -1,5 +1,3 @@
-const fastify = require('./fastify')
-
 module.exports = {
-  fastify
+  fastify: require('./fastify')
 }
