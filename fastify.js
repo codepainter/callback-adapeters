@@ -1,6 +1,16 @@
 // const time = require('../moment-time')
 const { getEnv, heapdiff } = require('../helpers')
 
+const time = Object.freeze({
+  getDurationInMilliseconds: function (start) {
+    const NS_PER_SEC = 1e9
+    const NS_TO_MS = 1e6
+    const diff = process.hrtime(start)
+
+    return ((diff[0] * NS_PER_SEC + diff[1]) / NS_TO_MS).toPrecision(2).toString() + 'ms'
+  }
+})
+
 module.exports = function makeCallback ({ apiVersion = 'service-f0.0.0' } = {}) {
   const log = require('debug')('callback:fastify')
   log('apiVersion:', apiVersion)
