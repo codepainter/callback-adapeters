@@ -1,5 +1,5 @@
 // const time = require('../moment-time')
-const { getEnv, heapdiff } = require('../helpers')
+const { heapdiff } = require('../helpers')
 
 const time = Object.freeze({
   getDurationInMilliseconds: function (start) {
