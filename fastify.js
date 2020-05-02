@@ -11,7 +11,7 @@ const time = Object.freeze({
   }
 })
 
-module.exports = function makeCallback ({ apiVersion = 'service-f0.0.0' } = {}) {
+module.exports = function makeFastifyCallback ({ apiVersion = 'service-f0.0.0' } = {}) {
   const log = require('debug')('callback:fastify')
   log('apiVersion:', apiVersion)
   if (!apiVersion) throw new Error('apiVersion not specified')
